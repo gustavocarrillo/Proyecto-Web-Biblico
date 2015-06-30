@@ -1,14 +1,14 @@
+/* fuentes */
 @import url(http://fonts.googleapis.com/css?family=Lora);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
 @import url(http://fonts.googleapis.com/css?family=Lora:400italic);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
 
-
-
+/* estilos */
 a {
 	text-decoration: none;
 }
 body {
-	background: white;
+	background: #000;
 	font-family: "Open Sans";
 	font-size: 16px;
 	max-width: 1000px;
@@ -95,24 +95,63 @@ nav ul li a {
 	padding: 0.5em 0.4em;
 }
 nav ul li a:hover {
-	color: white;
 	display: inline-block;
 	border-bottom: solid 3px #981914;
-
 }
 section {
 	background: #E6E6E6;
+	box-shadow: rgba(0,0,0,0.5) 1px 1px 5px;
 	margin: 0;
-	padding: 1em 1em;
+	padding: 0.5em 1em 3em 1em;
 }
 section article {
-	background: white;
-	border-radius: 10px;
-	box-shadow: rgba(0,0,0,0.5) 1px 1px 15px;
+	background: #fff;
+	box-shadow: rgba(0,0,0,0.5) 1px 1px 1px;
 	margin-top: 1.5em;
 	min-height: 170px;
-	max-width: 380px;
+	/*max-width: 380px;*/
 	position: relative;
+}
+section article a.fecha_art {
+	color: #000;
+	font-style: italic;
+	display: inline-block;
+	font-size: 0.8em;
+	margin-bottom: 1em;
+	margin-left: 1em;
+}
+section article a.seguir_art {
+	color: #FF0000;
+	display: none;
+	float: right;
+	font-size: 0.6em;
+	font-style: italic;
+	font-weight: bold;
+	margin-right: 1.3em;
+	text-align: right;
+	width: 10em;
+}
+section article div.autor_art{
+	display: block;
+	font-size: 0.8em;
+	margin-right: 1.3em; 
+	text-align: right;
+}
+section article div.autor_art a{
+	color: #05569E;
+	font-weight: bold;
+}
+section article a.tag_art {
+	background: #F7931E;
+	border-radius: 3px;
+	box-shadow: rgba(0,0,0,0.5) 1px 1px 5px;
+	color: #fff;
+	display: inline-block;
+	font-size: 0.8em;
+	padding: 0.3em 0.5em;
+	position: absolute;
+	bottom: -0.9em;
+	right: 0.6em;
 }
 section article figure {
 	float: left;
@@ -137,61 +176,21 @@ section article p {
 	margin: 0.6em 0.9em 0.5em 0.9em;
 	font-style: italic;
 }
-section article .seguir_art {
-
-	color: #FF0000;
-	display: none;
-	float: right;
-	font-size: 0.6em;
-	font-style: italic;
-	font-weight: bold;
-	margin-right: 1.3em;
-	text-align: right;
-	width: 10em;
-}
-section article div a.fecha_art {
-
-	display: inline-block;
-	font-size: 0.7em;
-
-	padding: 0;
-	/*position: absolute;
-	top: 12.9em;
-	left: 2.7em;*/
-
-}
-section article div.items_art {
-
-	display: block;
-	font-size: 0.8em;
-	margin-top: 1em;
-	margin-left: 2em;
-	padding-bottom: 1.5em;
-	position: relative;
-}
-section article div.items_art a {
-		color: #000;
-}
-section article div .autor_art{
-	float: right;
-	margin-right: 1.3em; 
-}
-section article .tag_art {
-	width: 7.1em;
-	position: absolute;
-	bottom: -0.6em;
-	right: 0.8em;
-}
-section article .tag_art a{	
-	background: #F7931E;
-	border-radius: 3px;
-	box-shadow: rgba(0,0,0,0.5) 1px 1px 5px;
-	color: #fff;
-	font-size: 0.8em;
-	padding: 0.3em 0.5em;
-}
 
 
+/*Media Querys*/
 
+@media screen and (min-width: 413px){
+	section article a.fecha_art {
+		float: left;
+		margin-left: 0;
+		margin-bottom: 0;
+	}
+	section article div.autor_art {
+		display: inline-block;
+		float: right;
+	}
+
+} 
 
 
